@@ -5,7 +5,7 @@ import { FcFlashOn } from "react-icons/fc";
 const Skill = ({ skill }) => {
   const list = [];
   for (let i = 0; i < skill.level; i++) {
-    list.push(<FcFlashOn />);
+    list.push(<FcFlashOn key={i} />);
   }
 
   return (
