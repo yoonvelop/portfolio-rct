@@ -4,22 +4,20 @@ import palette from "../lib/styles/palette";
 import Button from "./common/Button";
 import { FiArrowRight } from "react-icons/fi";
 
-const Main = () => {
+const MainSection = () => {
   return (
     <MainBolok>
       <Bg />
       <GradientBox>
         <MainWrap>
-          <TextBox>
-            <div>
-              <Desc>Front-end developer</Desc>
-              <Title>윤혜빈 입니다.</Title>
-              <Desc>소개소개</Desc>
-            </div>
-            <Button to="/about">
-              About More <FiArrowRight />
-            </Button>
-          </TextBox>
+          <div>
+            <Desc>Front-end developer</Desc>
+            <Title>윤혜빈 입니다.</Title>
+            <Desc>소개소개</Desc>
+          </div>
+          <Button to="/about">
+            About More <FiArrowRight />
+          </Button>
         </MainWrap>
       </GradientBox>
     </MainBolok>
@@ -47,6 +45,9 @@ const MainWrap = styled.div`
   margin: 0 auto;
   height: 100%;
   padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const GradientBox = styled.div`
@@ -66,12 +67,6 @@ const GradientBox = styled.div`
   );
 `;
 
-const TextBox = styled.div`
-  display: flex;
-  flex: 1;
-  justify-content: space-between;
-`;
-
 const Title = styled.h1`
   color: ${palette.white};
   font-size: 1.5rem;
@@ -86,4 +81,4 @@ const Desc = styled.p`
   margin: 0;
 `;
 
-export default Main;
+export default MainSection;

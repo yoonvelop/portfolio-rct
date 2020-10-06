@@ -1,14 +1,14 @@
 import React from "react";
-import Main from "../components/Main";
-import Project from "../components/Project";
-import Skill from "../components/Skill";
+import MainSection from "../components/MainSection";
+import ProjectSection from "../components/ProjectSection";
+import SkillSection from "../components/SkillSection";
 
 const HomePage = () => {
   return (
     <>
-      <Main />
-      <Skill />
-      <Project />
+      <MainSection />
+      <SkillSection />
+      <ProjectSection />
     </>
   );
 };
