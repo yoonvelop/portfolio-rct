@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import palette from "../../lib/styles/palette";
 
-const Section = ({ title, component: Component }) => {
+const Section = ({ title, categories, component: Component }) => {
   return (
     <SectionBlock>
       <SectionTitle>{title}</SectionTitle>
