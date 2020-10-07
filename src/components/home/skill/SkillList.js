@@ -16,14 +16,28 @@ import styled from "styled-components";
 import Skill from "./Skill";
 
 const SkillList = () => {
-  const onWheel = (e) => {
-    const container = scrollRef.current;
-    const containerScrollPosition = scrollRef.current.scrollLeft;
-    container.scrollTo({
-      top: 0,
-      left: containerScrollPosition + e.deltaY,
-    });
-  };
+  function onWheel(e) {
+    onWheel.ShouldPreventDefault = (e) => {
+      e.preventDefault();
+      const container = scrollRef.current;
+      const containerScrollPosition = scrollRef.current.scrollLeft;
+      container.scrollTo({
+        top: 0,
+        left: containerScrollPosition + e.deltaY,
+      });
+    };
+  }
+
+  // const onWheel = (e) => {
+  //   e.preventDefault();
+  //   const container = scrollRef.current;
+  //   const containerScrollPosition = scrollRef.current.scrollLeft;
+  //   container.scrollTo({
+  //     top: 0,
+  //     left: containerScrollPosition + e.deltaY,
+  //   });
+  // };
+  // onWheel.options = { passive: false };
 
   const scrollRef = useRef(null);
 
@@ -39,7 +53,7 @@ const SkillList = () => {
 
 const SkillListBlock = styled.div`
   display: flex;
-  overflow-x: scroll;
+  overflow-x: auto;
   padding-bottom: 1rem;
   &::-webkit-scrollbar {
     /* visibility: hidden; */
@@ -67,7 +81,7 @@ const skills = [
   {
     id: 2,
     icon: <SiReact />,
-    color: "#F7DF1B",
+    color: "#5ED4F4",
     category: "Front-end",
     name: "React.js",
     level: 3,
@@ -92,7 +106,7 @@ const skills = [
   {
     id: 5,
     icon: <SiJquery />,
-    color: "#F7DF1B",
+    color: "#0F66A9",
     category: "Front-end",
     name: "JQuery",
     level: 4,
@@ -101,7 +115,7 @@ const skills = [
   {
     id: 6,
     icon: <SiPhp />,
-    color: "#F7DF1B",
+    color: "#787BB3",
     category: "Back-end",
     name: "PHP",
 
@@ -110,7 +124,7 @@ const skills = [
   {
     id: 7,
     icon: <SiNodeDotJs />,
-    color: "#F7DF1B",
+    color: "#73AF5A",
     category: "Back-end",
     name: "Node.js",
     level: 1,
@@ -118,7 +132,7 @@ const skills = [
   {
     id: 8,
     icon: <SiAmazon />,
-    color: "#F7DF1B",
+    color: "#FCAD24",
     category: "Cloud",
     name: "AWS",
     level: 3,
@@ -126,7 +140,7 @@ const skills = [
   {
     id: 9,
     icon: <SiMysql />,
-    color: "#F7DF1B",
+    color: "#43759B",
     category: "Database",
     name: "MySql",
     level: 4,
@@ -134,7 +148,7 @@ const skills = [
   {
     id: 10,
     icon: <SiMongodb />,
-    color: "#F7DF1B",
+    color: "#489242",
     category: "Database",
     name: "MongoDB",
     level: 2,
@@ -142,7 +156,7 @@ const skills = [
   {
     id: 11,
     icon: <SiGit />,
-    color: "#F7DF1B",
+    color: "#E94F31",
     category: "Etc",
     name: "Git",
     level: 3,

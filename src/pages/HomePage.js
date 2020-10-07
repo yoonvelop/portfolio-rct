@@ -1,7 +1,7 @@
 import React from "react";
-import MainSection from "../components/MainSection";
-import ProjectSection from "../components/ProjectSection";
-import SkillSection from "../components/SkillSection";
+import MainSection from "../components/home/main/MainSection";
+import ProjectSection from "../components/home/project/ProjectSection";
+import SkillSection from "../components/home/skill/SkillSection";
 
 const HomePage = () => {
   return (

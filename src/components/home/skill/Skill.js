@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import palette from "../lib/styles/palette";
+import palette from "../../../lib/styles/palette";
 import { FcFlashOn } from "react-icons/fc";
 const Skill = ({ skill }) => {
   const list = [];
@@ -26,7 +26,7 @@ const SkillItem = styled.div`
   align-items: center;
   min-width: 6rem;
   color: ${palette.white};
-  background: ${palette.gray};
+  border: 1px solid ${palette.gray};
   padding: 1rem;
   border-radius: 0.2rem;
 

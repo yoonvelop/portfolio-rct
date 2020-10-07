@@ -12,10 +12,12 @@ const Section = ({ title, component: Component }) => {
 };
 
 const SectionBlock = styled.section`
-  padding: 1rem;
+  padding: 3rem 1rem;
   max-width: 70rem;
   width: 100%;
   margin: 0 auto;
+  background: ${palette.black};
+  z-index: 100;
 `;
 
 const SectionTitle = styled.div`
