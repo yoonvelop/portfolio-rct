@@ -34,6 +34,13 @@ const buttonStyle = css`
       border-color: ${palette.gray};
       color: ${palette.text_gray};
     `}
+
+  &+& {
+    margin-left: 1rem;
+  }
+  & > svg {
+    margin-left: 0.3rem;
+  }
 `;
 
 const StyledLink = styled(Link)`

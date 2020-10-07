@@ -1,24 +1,37 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import palette from "../../lib/styles/palette";
 import Button from "./Button";
+import List from "./List";
 
-const Section = ({ title, categories, component: Component }) => {
-  console.log(categories);
+const Section = ({
+  title,
+  categories,
+  sub,
+  vertical,
+  component: Component,
+  content,
+}) => {
   return (
-    <SectionBlock>
-      <SectionTitleBox>
-        <Title>{title}</Title>
-        {categories && (
-          <Categories>
-            {categories.map((category) => (
-              <Category key={category.id} category={category} />
-            ))}
-          </Categories>
-        )}
-      </SectionTitleBox>
-      <Component></Component>
-    </SectionBlock>
+    <SectionWrap>
+      <SectionBlock sub={sub}>
+        <SectionTitleBox sub={sub}>
+          <Title sub={sub}>{title}</Title>
+          {categories && (
+            <Categories>
+              {categories.map((category) => (
+                <Category key={category.id} category={category} />
+              ))}
+            </Categories>
+          )}
+        </SectionTitleBox>
+        <List
+          content={content}
+          component={Component}
+          vertical={vertical}
+        ></List>
+      </SectionBlock>
+    </SectionWrap>
   );
 };
 
@@ -30,13 +43,24 @@ const Category = ({ category }) => {
   );
 };
 
-const SectionBlock = styled.section`
+const SectionWrap = styled.section`
+  width: 100%;
+  background: ${palette.black};
+  z-index: 100;
+`;
+
+const SectionBlock = styled.div`
   padding: 3rem 1rem;
   max-width: 70rem;
   width: 100%;
   margin: 0 auto;
   background: ${palette.black};
   z-index: 100;
+  ${(props) =>
+    props.sub &&
+    css`
+      padding: 2rem 1rem;
+    `}
 `;
 
 const SectionTitleBox = styled.div`
@@ -44,6 +68,11 @@ const SectionTitleBox = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
+  ${(props) =>
+    props.sub &&
+    css`
+      margin-bottom: 0.5rem;
+    `}
 `;
 
 const Title = styled.div`
@@ -51,6 +80,11 @@ const Title = styled.div`
   font-size: 2.2rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  ${(props) =>
+    props.sub &&
+    css`
+      font-size: 1.8rem;
+    `}
 `;
 
 const Categories = styled.div`

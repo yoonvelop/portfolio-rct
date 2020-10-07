@@ -2,19 +2,19 @@ import React from "react";
 import styled from "styled-components";
 import palette from "../../../lib/styles/palette";
 import { FcFlashOn } from "react-icons/fc";
-const Skill = ({ skill }) => {
+const Skill = ({ item }) => {
   const list = [];
-  for (let i = 0; i < skill.level; i++) {
+  for (let i = 0; i < item.level; i++) {
     list.push(<FcFlashOn key={i} />);
   }
 
   return (
     <SkillItem>
       <div>
-        <IconBox color={skill.color}>{skill.icon}</IconBox>
+        <IconBox color={item.color}>{item.icon}</IconBox>
       </div>
-      <Category>{skill.category}</Category>
-      <SkillName>{skill.name}</SkillName>
+      <Category>{item.category}</Category>
+      <SkillName>{item.name}</SkillName>
       <Level>{list}</Level>
     </SkillItem>
   );

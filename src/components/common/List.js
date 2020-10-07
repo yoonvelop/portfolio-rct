@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
-import styled from "styled-components";
-import Project from "./Project";
-const ProjectList = () => {
+import styled, { css } from "styled-components";
+const List = ({ vertical, content, component: Component }) => {
   const onWheel = (e) => {
     const container = scrollRef.current;
     const containerScrollPosition = scrollRef.current.scrollLeft;
@@ -12,19 +11,25 @@ const ProjectList = () => {
   };
 
   const scrollRef = useRef(null);
-
   return (
-    <SkillListBlock onWheel={onWheel} ref={scrollRef}>
-      {projects.map((project) => (
-        <Project key={project.id} project={project}></Project>
-      ))}
+    <SkillListBlock onWheel={onWheel} ref={scrollRef} vertical={vertical}>
+      {content &&
+        content.map((item) => (
+          <Component key={item.id} item={item}></Component>
+        ))}
     </SkillListBlock>
   );
 };
 
 const SkillListBlock = styled.div`
   display: flex;
-  overflow-x: scroll;
+  ${(props) =>
+    props.vertical &&
+    css`
+      flex-direction: column;
+    `}
+
+  overflow-x: auto;
   padding-bottom: 1rem;
   &::-webkit-scrollbar {
     /* visibility: hidden; */
@@ -39,14 +44,4 @@ const SkillListBlock = styled.div`
   }
 `;
 
-const projects = [
-  {
-    id: 1,
-    title: "프로젝트 이름",
-    stack: "react javascript",
-    desc: "프로젝트 소개",
-    image: "../images/project-sample.png",
-  },
-];
-
-export default ProjectList;
+export default List;

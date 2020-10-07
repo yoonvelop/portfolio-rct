@@ -1,13 +1,14 @@
 import React from "react";
 import Section from "../../common/Section";
-import ProjectList from "./ProjectList";
+import Project from "./Project";
 
 const ProjectSection = () => {
   return (
     <Section
       title="Projects"
       categories={categories}
-      component={ProjectList}
+      component={Project}
+      content={projects}
     ></Section>
   );
 };
@@ -30,5 +31,13 @@ const categories = [
     category: "Etc",
   },
 ];
-
+const projects = [
+  {
+    id: 1,
+    title: "프로젝트 이름",
+    stack: "react javascript",
+    desc: "프로젝트 소개",
+    image: "../images/project-sample.png",
+  },
+];
 export default ProjectSection;

@@ -2,15 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import palette from "../../../lib/styles/palette";
 
-const Project = ({ project }) => {
+const Project = ({ item }) => {
   return (
     <ProjectItem>
       <ImageBox>
-        <img src={project.image} alt="project thumbnail" />
+        <img src={item.image} alt="project thumbnail" />
       </ImageBox>
-      <Title>{project.title}</Title>
-      <SubText>{project.stack}</SubText>
-      <SubText>{project.desc}</SubText>
+      <Title>{item.title}</Title>
+      <SubText>{item.stack}</SubText>
+      <SubText>{item.desc}</SubText>
     </ProjectItem>
   );
 };

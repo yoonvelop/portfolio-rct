@@ -7,69 +7,19 @@ import BgSection from "../../common/BgSection";
 
 const MainSection = () => {
   return (
-    <>
-      <BgSection />
-      <MainBolok>
-        <GradientBox>
-          <MainWrap>
-            <div>
-              <Desc>Front-end developer</Desc>
-              <Title>
-                윤혜빈 <span>입니다.</span>
-              </Title>
-            </div>
-            <Button to="/about">
-              About More <FiArrowRight />
-            </Button>
-          </MainWrap>
-        </GradientBox>
-      </MainBolok>
-    </>
+    <BgSection bgName="main-bg2">
+      <div>
+        <Desc>Front-end developer</Desc>
+        <Title>
+          윤혜빈 <span>입니다.</span>
+        </Title>
+      </div>
+      <Button to="/about">
+        About More <FiArrowRight />
+      </Button>
+    </BgSection>
   );
 };
-
-const MainBolok = styled.section`
-  width: 100%;
-  height: 32rem;
-  position: relative;
-`;
-
-// const Bg = styled.div`
-//   position: absolute;
-//   background: url("../images/main-bg2.jpg");
-//   background-size: cover;
-//   width: 100%;
-//   height: 100%;
-//   background-position: center;
-// `;
-
-const MainWrap = styled.div`
-  width: 100%;
-  max-width: 70rem;
-  margin: 0 auto;
-  height: 100%;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-const GradientBox = styled.div`
-  width: 100%;
-  display: flex;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  bottom: 0;
-  height: 15rem;
-  align-items: center;
-  background: linear-gradient(
-    360deg,
-    rgba(0, 0, 0, 1) 8.98%,
-    rgba(0, 0, 0, 0) 100%
-  );
-`;
 
 const Title = styled.h1`
   color: ${palette.white};
