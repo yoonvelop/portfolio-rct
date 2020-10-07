@@ -1,18 +1,42 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled, { css } from "styled-components";
+import palette from "../../lib/styles/palette";
+import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 const List = ({ vertical, content, component: Component }) => {
-  const onWheel = (e) => {
-    const container = scrollRef.current;
-    const containerScrollPosition = scrollRef.current.scrollLeft;
-    container.scrollTo({
-      top: 0,
-      left: containerScrollPosition + e.deltaY,
-    });
+  const scrollRef = useRef(null);
+  const [hasScroll, setHasScroll] = useState();
+  // const [scrollHeight, setScrollHeight] = useState();
+  const [leftLocation, setlleftLocation] = useState(false);
+
+  useEffect(() => {
+    resizeWindow();
+    window.addEventListener("resize", resizeWindow);
+    return () => window.removeEventListener("resize", resizeWindow);
+  }, [hasScroll]);
+
+  const resizeWindow = () => {
+    const hasHorizontalScrollbar =
+      scrollRef.current.scrollWidth > scrollRef.current.clientWidth;
+    setHasScroll(hasHorizontalScrollbar);
   };
 
-  const scrollRef = useRef(null);
+  const onClick = (e) => {
+    const dd = leftLocation ? 0 : scrollRef.current.scrollWidth;
+    scrollRef.current.scrollTo({
+      top: window.scrollTop,
+      left: dd,
+      behavior: "smooth",
+    });
+    setlleftLocation(!leftLocation);
+  };
+
   return (
-    <SkillListBlock onWheel={onWheel} ref={scrollRef} vertical={vertical}>
+    <SkillListBlock ref={scrollRef} vertical={vertical}>
+      {hasScroll && (
+        <MoveButton left={leftLocation} onClick={onClick}>
+          {leftLocation ? <RiArrowLeftSLine /> : <RiArrowRightSLine />}
+        </MoveButton>
+      )}
       {content &&
         content.map((item) => (
           <Component key={item.id} item={item}></Component>
@@ -20,6 +44,28 @@ const List = ({ vertical, content, component: Component }) => {
     </SkillListBlock>
   );
 };
+
+const MoveButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background: ${palette.white};
+  cursor: pointer;
+  color: ${palette.gray};
+  align-self: center;
+  outline: 0;
+  border: 0;
+  position: absolute;
+  font-size: 1.5rem;
+  right: -1.5rem;
+  ${(props) =>
+    props.left &&
+    css`
+      left: -1.5rem;
+    `}
+`;
 
 const SkillListBlock = styled.div`
   display: flex;
@@ -32,15 +78,7 @@ const SkillListBlock = styled.div`
   overflow-x: auto;
   padding-bottom: 1rem;
   &::-webkit-scrollbar {
-    /* visibility: hidden; */
-    width: 4px;
-    height: 4px;
-    border-radius: 6px;
-    background: rgba(255, 255, 255, 0.1);
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 6px;
+    visibility: hidden;
   }
 `;
 

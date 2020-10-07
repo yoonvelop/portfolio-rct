@@ -50,6 +50,7 @@ const SectionWrap = styled.section`
 `;
 
 const SectionBlock = styled.div`
+  position: relative;
   padding: 3rem 1rem;
   max-width: 70rem;
   width: 100%;
