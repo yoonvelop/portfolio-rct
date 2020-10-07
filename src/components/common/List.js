@@ -68,6 +68,7 @@ const MoveButton = styled.button`
   ${(props) =>
     props.left &&
     css`
+      right: unset;
       left: -1.5rem;
     `}
 `;
