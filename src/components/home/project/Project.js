@@ -19,7 +19,7 @@ const ProjectItem = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 15rem;
+  width: 18rem;
   color: ${palette.white};
   padding: 1rem;
 

@@ -18,7 +18,6 @@ const ProjectList = () => {
       {projects.map((project) => (
         <Project key={project.id} project={project}></Project>
       ))}
-      ;
     </SkillListBlock>
   );
 };

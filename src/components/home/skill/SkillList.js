@@ -54,7 +54,7 @@ const SkillList = () => {
 const SkillListBlock = styled.div`
   display: flex;
   overflow-x: auto;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
   &::-webkit-scrollbar {
     /* visibility: hidden; */
     width: 4px;

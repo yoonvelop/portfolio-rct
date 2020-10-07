@@ -73,19 +73,19 @@ const GradientBox = styled.div`
 
 const Title = styled.h1`
   color: ${palette.white};
-  font-size: 1.7rem;
+  font-size: 2.5rem;
   font-weight: 900;
   margin: 0rem 0;
 
   & > span {
     font-weight: 500;
-    font-size: 1.3rem;
+    font-size: 2.2rem;
   }
 `;
 
 const Desc = styled.p`
   color: ${palette.text_gray};
-  font-size: 1rem;
+  font-size: 1.7rem;
   font-weight: 500;
   margin: 0;
 `;

@@ -3,8 +3,12 @@ import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 import palette from "../../lib/styles/palette";
 
-const Button = ({ children, to }) => {
-  return <StyledLink to={to}>{children}</StyledLink>;
+const Button = (props) => {
+  return props.to ? (
+    <StyledLink {...props}>{props.children}</StyledLink>
+  ) : (
+    <StyledButton {...props}></StyledButton>
+  );
 };
 
 const buttonStyle = css`
@@ -23,9 +27,19 @@ const buttonStyle = css`
     background: ${palette.white};
     color: ${palette.black};
   }
+  ${(props) =>
+    props.category &&
+    css`
+      padding: 0.3rem 0.5rem;
+      border-color: ${palette.gray};
+      color: ${palette.text_gray};
+    `}
 `;
 
 const StyledLink = styled(Link)`
+  ${buttonStyle}
+`;
+const StyledButton = styled.button`
   ${buttonStyle}
 `;
 

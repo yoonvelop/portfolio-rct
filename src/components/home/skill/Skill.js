@@ -31,7 +31,7 @@ const SkillItem = styled.div`
   border-radius: 0.2rem;
 
   & + & {
-    margin-left: 0.5rem;
+    margin-left: 1rem;
   }
 `;
 
