@@ -20,18 +20,23 @@ const List = ({ vertical, content, component: Component }) => {
     setHasScroll(hasHorizontalScrollbar);
   };
 
+  const onScroll = () => {
+    scrollRef.current.scrollLeft === 0
+      ? setlleftLocation(false)
+      : setlleftLocation(true);
+  };
   const onClick = (e) => {
-    const dd = leftLocation ? 0 : scrollRef.current.scrollWidth;
+    const left = leftLocation ? 0 : scrollRef.current.scrollWidth;
     scrollRef.current.scrollTo({
       top: window.scrollTop,
-      left: dd,
+      left: left,
       behavior: "smooth",
     });
     setlleftLocation(!leftLocation);
   };
 
   return (
-    <SkillListBlock ref={scrollRef} vertical={vertical}>
+    <SkillListBlock ref={scrollRef} vertical={vertical} onScroll={onScroll}>
       {hasScroll && (
         <MoveButton left={leftLocation} onClick={onClick}>
           {leftLocation ? <RiArrowLeftSLine /> : <RiArrowRightSLine />}
