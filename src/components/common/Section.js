@@ -1,13 +1,12 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import palette from "../../lib/styles/palette";
-import Button from "./Button";
 import List from "./List";
 
 const Section = ({
   title,
-  categories,
   sub,
+  scroll,
   vertical,
   component: Component,
   content,
@@ -17,29 +16,15 @@ const Section = ({
       <SectionBlock sub={sub}>
         <SectionTitleBox sub={sub}>
           <Title sub={sub}>{title}</Title>
-          {categories && (
-            <Categories>
-              {categories.map((category) => (
-                <Category key={category.id} category={category} />
-              ))}
-            </Categories>
-          )}
         </SectionTitleBox>
         <List
+          scroll={scroll}
           content={content}
           component={Component}
           vertical={vertical}
         ></List>
       </SectionBlock>
     </SectionWrap>
-  );
-};
-
-const Category = ({ category }) => {
-  return (
-    <CategoryItem>
-      <Button category>{category.category}</Button>
-    </CategoryItem>
   );
 };
 
@@ -86,16 +71,6 @@ const Title = styled.div`
     css`
       font-size: 1.8rem;
     `}
-`;
-
-const Categories = styled.div`
-  display: flex;
-  align-items: center;
-`;
-const CategoryItem = styled.div`
-  & + & {
-    margin-left: 0.5rem;
-  }
 `;
 
 export default Section;

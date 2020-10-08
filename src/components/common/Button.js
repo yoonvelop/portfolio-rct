@@ -27,15 +27,8 @@ const buttonStyle = css`
     background: ${palette.white};
     color: ${palette.black};
   }
-  ${(props) =>
-    props.category &&
-    css`
-      padding: 0.3rem 0.5rem;
-      border-color: ${palette.gray};
-      color: ${palette.text_gray};
-    `}
 
-  &+& {
+  & + & {
     margin-left: 1rem;
   }
   & > svg {

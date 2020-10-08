@@ -15,7 +15,9 @@ import {
   SiGit,
 } from "react-icons/si";
 const SkillSection = () => {
-  return <Section title="Skills" component={Skill} content={skills}></Section>;
+  return (
+    <Section title="Skills" component={Skill} scroll content={skills}></Section>
+  );
 };
 
 const skills = [

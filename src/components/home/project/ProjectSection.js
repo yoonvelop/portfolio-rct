@@ -4,40 +4,42 @@ import Project from "./Project";
 
 const ProjectSection = () => {
   return (
-    <Section
-      title="Projects"
-      categories={categories}
-      component={Project}
-      content={projects}
-    ></Section>
+    <Section title="Projects" component={Project} content={projects}></Section>
   );
 };
 
-const categories = [
-  {
-    id: 1,
-    category: "All",
-  },
-  {
-    id: 2,
-    category: "Front-End",
-  },
-  {
-    id: 3,
-    category: "Back-End",
-  },
-  {
-    id: 4,
-    category: "Etc",
-  },
-];
 const projects = [
   {
     id: 1,
-    title: "프로젝트 이름",
-    stack: "react javascript",
-    desc: "프로젝트 소개",
-    image: "../images/project-sample.png",
+    category: "Front-end",
+    title: "개발팀 랜딩 페이지",
+    stack: ["HTML", "CSS", "Javascript", "Jquery", "AWS"],
+    summary: "프로젝트 소개",
+    desc: "프로젝트 소개~~~",
+    thumbnail: "../images/project/stevelabs_thumbnail.png",
+    image: [
+      "stevelabs01",
+      "stevelabs02",
+      "stevelabs03",
+      "stevelabs04",
+      "stevelabs05",
+    ],
+  },
+  {
+    id: 2,
+    category: "Back-end",
+    title: "COAL 코로나 알리미",
+    stack: ["PHP", "MySql", "AWS", "Firebase", "HTML", "CSS", "Javascript"],
+    summary: "프로젝트 소개",
+    desc: "프로젝트 소개~~~",
+    thumbnail: "../images/project/stevelabs_thumbnail.png",
+    image: [
+      "stevelabs01",
+      "stevelabs02",
+      "stevelabs03",
+      "stevelabs04",
+      "stevelabs05",
+    ],
   },
 ];
 export default ProjectSection;

@@ -2,10 +2,9 @@ import React, { useEffect, useRef, useState } from "react";
 import styled, { css } from "styled-components";
 import palette from "../../lib/styles/palette";
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
-const List = ({ vertical, content, component: Component }) => {
-  const scrollRef = useRef(null);
+const List = ({ vertical, scroll, content, component: Component }) => {
+  const scrollRef = useRef();
   const [hasScroll, setHasScroll] = useState();
-  // const [scrollHeight, setScrollHeight] = useState();
   const [leftLocation, setlleftLocation] = useState(false);
 
   useEffect(() => {
@@ -36,7 +35,12 @@ const List = ({ vertical, content, component: Component }) => {
   };
 
   return (
-    <SkillListBlock ref={scrollRef} vertical={vertical} onScroll={onScroll}>
+    <SkillListBlock
+      ref={scrollRef}
+      vertical={vertical}
+      scroll={scroll}
+      onScroll={onScroll}
+    >
       {hasScroll && (
         <MoveButton left={leftLocation} onClick={onClick}>
           {leftLocation ? <RiArrowLeftSLine /> : <RiArrowRightSLine />}
@@ -75,13 +79,19 @@ const MoveButton = styled.button`
 
 const SkillListBlock = styled.div`
   display: flex;
+  flex-wrap: wrap;
   ${(props) =>
     props.vertical &&
     css`
       flex-direction: column;
     `}
+  ${(props) =>
+    props.scroll &&
+    css`
+      overflow-x: auto;
+      flex-wrap: nowrap;
+    `}
 
-  overflow-x: auto;
   padding-bottom: 1rem;
   &::-webkit-scrollbar {
     visibility: hidden;
