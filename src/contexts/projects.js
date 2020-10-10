@@ -15,6 +15,7 @@ const inintialProjects = [
       "stevelabs04",
       "stevelabs05",
     ],
+    demo: "http://stevelabs.co/",
   },
   {
     id: 2,
@@ -36,8 +37,8 @@ const inintialProjects = [
 
 function projectReducer(state, action) {
   switch (action.type) {
-    case "GET":
-      return state.filter((project) => project.id === action.id);
+    case "FILTER":
+      return state.filter((project) => project.category === action.category);
     default:
       throw new Error(`Unhandled action type: ${action.type}`);
   }

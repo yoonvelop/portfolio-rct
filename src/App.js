@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
+import { ProjectProvider } from "./contexts/projects";
 import AboutPage from "./pages/AboutPage";
 import DetailPage from "./pages/DetailPage";
 import HomePage from "./pages/HomePage";
-import { ProjectProvider } from "./contexts/projects";
 function App() {
   return (
     <ProjectProvider>
