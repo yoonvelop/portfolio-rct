@@ -4,7 +4,6 @@ import styled from "styled-components";
 import palette from "../../../lib/styles/palette";
 
 const Project = ({ item }) => {
-  console.log(item);
   return (
     <ProjectItem to={`/detail/${item.id}`}>
       <ImageBox>
