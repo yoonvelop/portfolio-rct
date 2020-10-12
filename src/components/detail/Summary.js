@@ -60,7 +60,7 @@ const Summary = ({ project }) => {
 
 const SummaryBlock = styled.section`
   width: 100%;
-  height: 30%;
+  height: 25%;
   display: flex;
   border-bottom: 1px solid ${palette.gray};
   color: ${palette.white};

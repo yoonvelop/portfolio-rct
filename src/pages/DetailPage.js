@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
-import Content from "../components/detail/Content";
+import ContentSection from "../components/detail/ContentSection";
 import Summary from "../components/detail/Summary";
 import { useProjectState } from "../contexts/projects";
 const DetailPage = () => {
@@ -13,7 +13,7 @@ const DetailPage = () => {
   return (
     <DetailBlock>
       <Summary project={project} />
-      <Content project={project} />
+      <ContentSection project={project} />
     </DetailBlock>
   );
 };

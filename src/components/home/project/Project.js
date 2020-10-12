@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import palette from "../../../lib/styles/palette";
+import StackItem from "../../common/StackItem";
 
 const Project = ({ item }) => {
   return (
@@ -13,7 +14,7 @@ const Project = ({ item }) => {
       <SubText>{item.summary}</SubText>
       <StackBox>
         {item.stack.map((stack, index) => (
-          <StackItem key={index}>{stack}</StackItem>
+          <StackItem key={index} stack={stack} />
         ))}
       </StackBox>
     </ProjectItem>
@@ -55,17 +56,10 @@ const SubText = styled.span`
   font-size: 1rem;
   color: ${palette.text_gray};
 `;
+
 const StackBox = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;
 
-const StackItem = styled.span`
-  font-size: 0.8rem;
-  color: #ec5d5c;
-  background: ${palette.gray};
-  padding: 0.1rem 0.3rem;
-  border-radius: 0.2rem;
-  margin: 0.2rem;
-`;
 export default Project;

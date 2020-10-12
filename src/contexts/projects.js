@@ -31,6 +31,7 @@ const inintialProjects = [
       "stevelabs03",
       "stevelabs04",
       "stevelabs05",
+      "stevelabs06",
     ],
   },
 ];
