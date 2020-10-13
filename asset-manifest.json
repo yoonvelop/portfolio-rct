@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/portfolio-rct/static/css/main.9e010993.chunk.css",
-    "main.js": "/portfolio-rct/static/js/main.bcb1fc1b.chunk.js",
-    "main.js.map": "/portfolio-rct/static/js/main.bcb1fc1b.chunk.js.map",
-    "runtime-main.js": "/portfolio-rct/static/js/runtime-main.d82d3c21.js",
-    "runtime-main.js.map": "/portfolio-rct/static/js/runtime-main.d82d3c21.js.map",
-    "static/js/2.c93ab69b.chunk.js": "/portfolio-rct/static/js/2.c93ab69b.chunk.js",
-    "static/js/2.c93ab69b.chunk.js.map": "/portfolio-rct/static/js/2.c93ab69b.chunk.js.map",
-    "index.html": "/portfolio-rct/index.html",
-    "precache-manifest.eb2e598973b3efdf6631835d80f947d9.js": "/portfolio-rct/precache-manifest.eb2e598973b3efdf6631835d80f947d9.js",
-    "service-worker.js": "/portfolio-rct/service-worker.js",
-    "static/css/main.9e010993.chunk.css.map": "/portfolio-rct/static/css/main.9e010993.chunk.css.map",
-    "static/js/2.c93ab69b.chunk.js.LICENSE.txt": "/portfolio-rct/static/js/2.c93ab69b.chunk.js.LICENSE.txt"
+    "main.css": "https://yoonvelop.github.io/portfolio-rct/static/css/main.9e010993.chunk.css",
+    "main.js": "https://yoonvelop.github.io/portfolio-rct/static/js/main.7ad195ee.chunk.js",
+    "main.js.map": "https://yoonvelop.github.io/portfolio-rct/static/js/main.7ad195ee.chunk.js.map",
+    "runtime-main.js": "https://yoonvelop.github.io/portfolio-rct/static/js/runtime-main.ad222737.js",
+    "runtime-main.js.map": "https://yoonvelop.github.io/portfolio-rct/static/js/runtime-main.ad222737.js.map",
+    "static/js/2.2c9392dc.chunk.js": "https://yoonvelop.github.io/portfolio-rct/static/js/2.2c9392dc.chunk.js",
+    "static/js/2.2c9392dc.chunk.js.map": "https://yoonvelop.github.io/portfolio-rct/static/js/2.2c9392dc.chunk.js.map",
+    "index.html": "https://yoonvelop.github.io/portfolio-rct/index.html",
+    "precache-manifest.e84196daddea2c5961d8b5ccaaa05a9f.js": "https://yoonvelop.github.io/portfolio-rct/precache-manifest.e84196daddea2c5961d8b5ccaaa05a9f.js",
+    "service-worker.js": "https://yoonvelop.github.io/portfolio-rct/service-worker.js",
+    "static/css/main.9e010993.chunk.css.map": "https://yoonvelop.github.io/portfolio-rct/static/css/main.9e010993.chunk.css.map",
+    "static/js/2.2c9392dc.chunk.js.LICENSE.txt": "https://yoonvelop.github.io/portfolio-rct/static/js/2.2c9392dc.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.d82d3c21.js",
-    "static/js/2.c93ab69b.chunk.js",
+    "static/js/runtime-main.ad222737.js",
+    "static/js/2.2c9392dc.chunk.js",
     "static/css/main.9e010993.chunk.css",
-    "static/js/main.bcb1fc1b.chunk.js"
+    "static/js/main.7ad195ee.chunk.js"
   ]
 }
