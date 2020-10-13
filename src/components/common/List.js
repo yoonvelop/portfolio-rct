@@ -84,7 +84,7 @@ const MoveButton = styled.button`
 
 const ListBlock = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   ${(props) =>
     props.vertical &&

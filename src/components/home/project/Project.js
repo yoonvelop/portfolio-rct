@@ -28,25 +28,17 @@ const ProjectItem = styled(Link)`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 24%;
+  width: calc(100% / 4);
   color: ${palette.white};
   padding: 1rem;
   cursor: pointer;
 
-  & + & {
-    margin-left: 0.5rem;
-
-    @media only screen and (max-width: 600px) {
-      margin-left: 0;
-    }
-  }
-
   @media only screen and (max-width: 1200px) {
-    width: 32%;
+    width: calc(100% / 3);
   }
 
   @media only screen and (max-width: 850px) {
-    width: 48%;
+    width: calc(100% / 2);
   }
 
   @media only screen and (max-width: 600px) {

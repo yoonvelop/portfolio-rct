@@ -23,12 +23,8 @@ const CertificationItem = styled.div`
   display: flex;
   width: 23%;
   flex-direction: column;
-  & + & {
-    margin-left: 1rem;
-    @media only screen and (max-width: 850px) {
-      margin-left: 0;
-    }
-  }
+  margin: 0 auto 1rem;
+
   @media only screen and (max-width: 850px) {
     width: 47%;
     margin-bottom: 1rem;
