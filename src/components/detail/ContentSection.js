@@ -20,7 +20,7 @@ const ContentSection = ({ project }) => {
           </ImageList>
         </SubSection>
         <SubSection>
-          <h1>소개 및 역할</h1>
+          <h1>소개</h1>
           <DescBox>{project.desc}</DescBox>
         </SubSection>
         <SubSection>
@@ -45,16 +45,16 @@ const SubSection = styled.div`
 const ImageList = styled.div`
   display: flex;
   overflow-x: auto;
-  height: 20rem;
+  height: 25rem;
   padding-bottom: 1rem;
   &::-webkit-scrollbar {
     width: 4px;
     height: 4px;
     border-radius: 6px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
   }
   &::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.3);
     border-radius: 6px;
   }
 
@@ -64,6 +64,8 @@ const ImageList = styled.div`
   }
 `;
 
-const DescBox = styled.div``;
+const DescBox = styled.div`
+  color: ${palette.text_gray};
+`;
 
 export default ContentSection;

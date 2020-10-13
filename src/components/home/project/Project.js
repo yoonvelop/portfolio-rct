@@ -10,6 +10,7 @@ const Project = ({ item }) => {
       <ImageBox>
         <img src={item.thumbnail} alt="project thumbnail" />
       </ImageBox>
+      <TypeText>{item.type} project</TypeText>
       <Title>{item.title}</Title>
       <SubText>{item.summary}</SubText>
       <StackBox>
@@ -25,7 +26,7 @@ const ProjectItem = styled(Link)`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 18rem;
+  width: 24%;
   color: ${palette.white};
   padding: 1rem;
   cursor: pointer;
@@ -38,23 +39,30 @@ const ProjectItem = styled(Link)`
 const ImageBox = styled.div`
   margin-bottom: 0.5rem;
   width: 100%;
+  height: 10rem;
   border-radius: 10px;
   overflow: hidden;
   & > img {
     width: 100%;
   }
 `;
+const TypeText = styled.span`
+  color: ${palette.white};
+  font-size: 0.8rem;
+`;
 
 const Title = styled.div`
   font-size: 1.1rem;
   color: ${palette.white};
   font-weight: 600;
-  margin: 0.2rem 0 0.5rem;
+  margin: 0.1rem 0 0.5rem;
 `;
 
 const SubText = styled.span`
   font-size: 1rem;
   color: ${palette.text_gray};
+  word-break: keep-all;
+  margin-bottom: 0.2rem;
 `;
 
 const StackBox = styled.div`

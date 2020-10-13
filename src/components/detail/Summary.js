@@ -6,7 +6,7 @@ import Button from "../common/Button";
 import { useHistory } from "react-router-dom";
 import { RiArrowGoBackLine } from "react-icons/ri";
 import { AiOutlinePlaySquare } from "react-icons/ai";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaVimeo } from "react-icons/fa";
 
 const Summary = ({ project }) => {
   const history = useHistory();
@@ -42,7 +42,29 @@ const Summary = ({ project }) => {
                 Demo
               </Button>
             )}
+            {project.velog && (
+              <Button
+                to={{
+                  pathname: project.velog,
+                }}
+                target="_blank"
+                iconright="true"
+                mini="true"
+                marginleft="true"
+              >
+                <FaVimeo />
+                Velog
+              </Button>
+            )}
             <Button
+              to={
+                project.github
+                  ? {
+                      pathname: project.github,
+                    }
+                  : ""
+              }
+              target="_blank"
               iconright="true"
               mini="true"
               marginleft="true"
@@ -68,6 +90,9 @@ const SummaryBlock = styled.section`
 
 const ImgBox = styled.div`
   width: 15rem;
+  height: 100%;
+  overflow: hidden;
+
   & > img {
     width: 100%;
   }
@@ -79,6 +104,7 @@ const DescBox = styled.div`
     color: ${palette.text_gray};
   }
 `;
+
 const Title = styled.h1`
   margin: 0;
   font-size: 1.8rem;

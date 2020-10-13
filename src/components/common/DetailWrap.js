@@ -9,10 +9,11 @@ const Wrap = styled.div`
   max-width: 70rem;
   width: 100%;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 2rem;
   display: flex;
   align-items: center;
   flex-direction: ${(props) => props.direction};
   overflow: hidden;
+  height: 100%;
 `;
 export default DetailWrap;
