@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "https://yoonvelop.github.io/portfolio-rct/precache-manifest.5ed21a1174250417206a2a2cbf6809e6.js"
+  "https://yoonvelop.github.io/portfolio-rct/precache-manifest.2fcdea62d59c48ab8ba8d127dc6b43e4.js"
 );
 
 self.addEventListener('message', (event) => {
