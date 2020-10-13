@@ -23,6 +23,9 @@ const ExperienceItem = styled.div`
   & > img {
     width: 5rem;
     margin-right: 1rem;
+    @media only screen and (max-width: 450px) {
+      width: 4rem;
+    }
   }
   & + & {
     margin-top: 1rem;
@@ -38,12 +41,18 @@ const MataTitle = styled.p`
   font-size: 1.1rem;
   font-weight: 500;
   margin: 0;
+  @media only screen and (max-width: 450px) {
+    font-size: 1rem;
+  }
 `;
 const MetaDesc = styled.p`
   font-size: 0.9rem;
   font-weight: 400;
   margin: 0;
   color: ${palette.text_gray};
+  @media only screen and (max-width: 450px) {
+    font-size: 0.8rem;
+  }
 `;
 
 export default Experience;

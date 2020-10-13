@@ -25,6 +25,13 @@ const CertificationItem = styled.div`
   flex-direction: column;
   & + & {
     margin-left: 1rem;
+    @media only screen and (max-width: 850px) {
+      margin-left: 0;
+    }
+  }
+  @media only screen and (max-width: 850px) {
+    width: 47%;
+    margin-bottom: 1rem;
   }
 `;
 
@@ -38,7 +45,10 @@ const ImgBox = styled.div`
   background: ${palette.white};
   margin-bottom: 0.7rem;
   & > img {
-    width: 10rem;
+    height: 80%;
+  }
+  @media only screen and (max-width: 450px) {
+    height: 2.2rem;
   }
 `;
 
@@ -52,12 +62,18 @@ const MataTitle = styled.p`
   font-size: 1.1rem;
   font-weight: 500;
   margin: 0;
+  @media only screen and (max-width: 450px) {
+    font-size: 1rem;
+  }
 `;
 const MetaDesc = styled.p`
   font-size: 0.9rem;
   font-weight: 400;
   margin: 0;
   color: ${palette.text_gray};
+  @media only screen and (max-width: 450px) {
+    font-size: 0.8rem;
+  }
 `;
 
 export default Certification;

@@ -63,7 +63,7 @@ const SectionTitleBox = styled.div`
       margin-bottom: 0.5rem;
     `}
   @media only screen and (max-width: 480px) {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
 `;
 
