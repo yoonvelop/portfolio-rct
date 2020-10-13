@@ -53,7 +53,7 @@ const ProjectItem = styled(Link)`
     width: 100%;
     flex-direction: row;
     padding: 1rem 0;
-    height: 12rem;
+    height: 11rem;
     margin-left: 0;
   }
 `;
