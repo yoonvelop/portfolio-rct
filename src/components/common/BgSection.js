@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 const BgSection = ({ bgName, children }) => {
   return (
@@ -17,19 +17,22 @@ const Bg = styled.div`
   width: 100%;
   height: 32rem;
   position: fixed;
-  ${(props) =>
-    css`
-      background: url("../images/${props.bgName}.jpg");
-    `}
+  background: ${(props) => `url("../images/${props.bgName}.jpg")`};
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   top: 0;
+  @media only screen and (max-width: 480px) {
+    height: 23rem;
+  }
 `;
 const MainBolok = styled.section`
   width: 100%;
   height: 32rem;
   position: relative;
+  @media only screen and (max-width: 480px) {
+    height: 23rem;
+  }
 `;
 
 const MainWrap = styled.div`
@@ -58,6 +61,9 @@ const GradientBox = styled.div`
     rgba(0, 0, 0, 1) 8.98%,
     rgba(0, 0, 0, 0) 100%
   );
+  @media only screen and (max-width: 480px) {
+    height: 8rem;
+  }
 `;
 
 export default BgSection;

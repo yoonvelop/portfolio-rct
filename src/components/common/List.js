@@ -76,6 +76,10 @@ const MoveButton = styled.button`
       right: unset;
       left: -1.5rem;
     `}
+
+  @media only screen and (max-width: 1200px) {
+    display: none;
+  }
 `;
 
 const ListBlock = styled.div`
@@ -96,6 +100,18 @@ const ListBlock = styled.div`
   padding-bottom: 1rem;
   &::-webkit-scrollbar {
     visibility: hidden;
+  }
+  @media only screen and (max-width: 1200px) {
+    &::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.2);
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 6px;
+    }
   }
 `;
 

@@ -26,10 +26,15 @@ const Title = styled.h1`
   font-size: 2.5rem;
   font-weight: 900;
   margin: 0rem 0;
-
+  @media only screen and (max-width: 480px) {
+    font-size: 2rem;
+  }
   & > span {
     font-weight: 500;
     font-size: 2.2rem;
+    @media only screen and (max-width: 480px) {
+      font-size: 1.5rem;
+    }
   }
 `;
 
@@ -38,6 +43,9 @@ const Desc = styled.p`
   font-size: 1.7rem;
   font-weight: 500;
   margin: 0;
+  @media only screen and (max-width: 480px) {
+    font-size: 1.1rem;
+  }
 `;
 
 export default MainSection;
