@@ -87,7 +87,7 @@ const SummaryBlock = styled.section`
   border-bottom: 1px solid ${palette.gray};
   color: ${palette.white};
   @media only screen and (max-width: 850px) {
-    height: 20%;
+    height: 23%;
   }
   @media only screen and (max-width: 600px) {
     height: 15%;

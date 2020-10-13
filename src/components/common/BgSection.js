@@ -22,7 +22,7 @@ const Bg = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   top: 0;
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 600px) {
     height: 23rem;
   }
 `;
@@ -30,7 +30,7 @@ const MainBolok = styled.section`
   width: 100%;
   height: 32rem;
   position: relative;
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 600px) {
     height: 23rem;
   }
 `;
@@ -63,8 +63,8 @@ const GradientBox = styled.div`
     rgba(0, 0, 0, 1) 8.98%,
     rgba(0, 0, 0, 0) 100%
   );
-  @media only screen and (max-width: 480px) {
-    height: 8rem;
+  @media only screen and (max-width: 600px) {
+    height: 7.5rem;
   }
 `;
 

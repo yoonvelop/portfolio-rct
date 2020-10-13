@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import palette from "../../lib/styles/palette";
 import BgSection from "../common/BgSection";
@@ -6,8 +6,20 @@ import Button from "../common/Button";
 import { FaBars, FaGithub, FaVimeo } from "react-icons/fa";
 
 const Head = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    resizeWindow();
+    window.addEventListener("resize", resizeWindow);
+  }, [windowWidth]);
+
+  const resizeWindow = () => {
+    const width = window.innerWidth;
+    setWindowWidth(width);
+  };
+  const column = windowWidth < 600;
   return (
-    <BgSection bgName="main-bg4" column>
+    <BgSection bgName="main-bg4" column={column}>
       <div>
         <Title>About</Title>
       </div>
@@ -38,10 +50,8 @@ const Title = styled.h1`
   color: ${palette.white};
   font-size: 2.7rem;
   font-weight: 700;
-  margin: 0rem 0;
-
-  & > span {
-    font-weight: 500;
+  margin: 0;
+  @media only screen and (max-width: 600px) {
     font-size: 2.2rem;
   }
 `;
