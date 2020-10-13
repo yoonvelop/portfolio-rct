@@ -21,9 +21,10 @@ const Certification = ({ item }) => {
 
 const CertificationItem = styled.div`
   display: flex;
+  width: 23%;
   flex-direction: column;
   & + & {
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
 `;
 

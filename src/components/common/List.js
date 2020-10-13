@@ -35,7 +35,7 @@ const List = ({ vertical, scroll, content, component: Component }) => {
   };
 
   return (
-    <SkillListBlock
+    <ListBlock
       ref={scrollRef}
       vertical={vertical}
       scroll={scroll}
@@ -46,11 +46,12 @@ const List = ({ vertical, scroll, content, component: Component }) => {
           {leftLocation ? <RiArrowLeftSLine /> : <RiArrowRightSLine />}
         </MoveButton>
       )}
-      {content &&
-        content.map((item) => (
-          <Component key={item.id} item={item}></Component>
-        ))}
-    </SkillListBlock>
+      {content ? (
+        content.map((item) => <Component key={item.id} item={item}></Component>)
+      ) : (
+        <Component />
+      )}
+    </ListBlock>
   );
 };
 
@@ -77,7 +78,7 @@ const MoveButton = styled.button`
     `}
 `;
 
-const SkillListBlock = styled.div`
+const ListBlock = styled.div`
   display: flex;
   flex-wrap: wrap;
   ${(props) =>
