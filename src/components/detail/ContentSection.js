@@ -40,6 +40,17 @@ const ContentBlock = styled.section`
 const SubSection = styled.div`
   width: 100%;
   color: ${palette.white};
+  font-size: 1rem;
+  @media only screen and (max-width: 450px) {
+    font-size: 0.8rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem 0;
+    @media only screen and (max-width: 450px) {
+      font-size: 1.3rem;
+    }
+  }
 `;
 
 const ImageList = styled.div`
@@ -56,6 +67,10 @@ const ImageList = styled.div`
   &::-webkit-scrollbar-thumb {
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 6px;
+  }
+
+  @media only screen and (max-width: 450px) {
+    height: 15rem;
   }
 
   img {

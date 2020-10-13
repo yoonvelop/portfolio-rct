@@ -86,28 +86,53 @@ const SummaryBlock = styled.section`
   display: flex;
   border-bottom: 1px solid ${palette.gray};
   color: ${palette.white};
+  @media only screen and (max-width: 850px) {
+    height: 20%;
+  }
+  @media only screen and (max-width: 600px) {
+    height: 15%;
+  }
+  @media only screen and (max-width: 450px) {
+    height: unset;
+  }
 `;
 
 const ImgBox = styled.div`
-  width: 15rem;
   height: 100%;
   overflow: hidden;
 
   & > img {
-    width: 100%;
+    height: 100%;
+  }
+  @media only screen and (max-width: 450px) {
+    display: none;
   }
 `;
 const DescBox = styled.div`
   margin-left: 2rem;
   & > p {
     font-size: 0.9rem;
+    margin: 0.7rem 0;
     color: ${palette.text_gray};
+    @media only screen and (max-width: 600px) {
+      font-size: 0.8rem;
+      margin: 0.5rem 0;
+    }
+  }
+  @media only screen and (max-width: 450px) {
+    margin-left: 0;
   }
 `;
 
 const Title = styled.h1`
   margin: 0;
   font-size: 1.8rem;
+  @media only screen and (max-width: 850px) {
+    font-size: 1.5rem;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 1.3rem;
+  }
 `;
 
 const LinkBox = styled.div`

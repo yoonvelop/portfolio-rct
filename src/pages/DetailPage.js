@@ -23,5 +23,8 @@ const DetailBlock = styled.div`
   height: 100vh;
   flex-direction: column;
   overflow: hidden;
+  @media only screen and (max-width: 600px) {
+    overflow: auto;
+  }
 `;
 export default DetailPage;

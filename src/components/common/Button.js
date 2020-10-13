@@ -47,6 +47,7 @@ const buttonStyle = css`
   }
   @media only screen and (max-width: 480px) {
     font-size: 0.8rem;
+    ${(props) => props.mini && " padding: 0.2rem 0.5rem;"};
   }
 `;
 
