@@ -49,6 +49,20 @@ const inintialProjects = [
     id: 3,
     category: "Front-end",
     type: "side",
+    title: "Portfolio",
+    stack: ["React.js", "styled-component", "contextAPI"],
+    summary: "간단한 소개 및 프로젝트를 보여주는 포트폴리오 사이트",
+    desc:
+      "간단한 소개와 스킬, 여태까지 작업한 사이드,회사 프로젝트를 보여주는 포트폴리오 사이트를 React.js를 사용해 구현했습니다. ",
+    thumbnail: "images/project/portfolio_thumbnail.png",
+    image: ["portfolio01", "portfolio02", "portfolio03", "portfolio04"],
+    demo: "https://yoonvelop.github.io/portfolio-rct/",
+    github: "https://github.com/yoonvelop/portfolio-rct",
+  },
+  {
+    id: 4,
+    category: "Front-end",
+    type: "side",
     title: "Simple Youtube",
     stack: ["React.js", "PostCSS"],
     summary: "Youtube의 간단한 기능( 인기동영상, 검색 )만을 구현",
@@ -60,7 +74,7 @@ const inintialProjects = [
     github: "https://github.com/yoonvelop/youtube-simple",
   },
   {
-    id: 4,
+    id: 5,
     category: "Back-end",
     type: "company",
     title: "Aiinz API",
@@ -81,7 +95,7 @@ const inintialProjects = [
     demo: "https://play.google.com/store/apps/details?id=com.codberg.aiinz",
   },
   {
-    id: 5,
+    id: 6,
     category: "Front-end",
     type: "company",
     title: "nCube 회사 랜딩 페이지",
@@ -94,7 +108,7 @@ const inintialProjects = [
     demo: "http://ncube.world/",
   },
   {
-    id: 6,
+    id: 7,
     category: "Front-end",
     type: "company",
     title: "가상화폐 거래소",
