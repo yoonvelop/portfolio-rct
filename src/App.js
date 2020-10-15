@@ -8,7 +8,7 @@ import HomePage from "./pages/HomePage";
 function App() {
   return (
     <ProjectProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/portfolio-rct">
         <Switch>
           <Route path="/" exact>
             <HomePage />

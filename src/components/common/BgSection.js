@@ -17,7 +17,7 @@ const Bg = styled.div`
   width: 100%;
   height: 32rem;
   position: fixed;
-  background: ${(props) => `url("../images/${props.bgName}.jpg")`};
+  background: ${(props) => `url("images/${props.bgName}.jpg")`};
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

@@ -4,10 +4,7 @@ import palette from "../../../lib/styles/palette";
 const Experience = ({ item }) => {
   return (
     <ExperienceItem>
-      <img
-        src={`../images/company/${item.thumbnail}.png`}
-        alt="experience logo"
-      />
+      <img src={`images/company/${item.thumbnail}.png`} alt="experience logo" />
       <MetaBox>
         <MataTitle>{item.title}</MataTitle>
         <MetaDesc>{item.desc}</MetaDesc>

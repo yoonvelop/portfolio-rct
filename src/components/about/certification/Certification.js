@@ -6,7 +6,7 @@ const Certification = ({ item }) => {
     <CertificationItem>
       <ImgBox>
         <img
-          src={`../images/certification/${item.thumbnail}.png`}
+          src={`images/certification/${item.thumbnail}.png`}
           alt="certification logo"
         />
       </ImgBox>

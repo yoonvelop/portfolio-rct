@@ -7,9 +7,7 @@ import StackItem from "../../common/StackItem";
 const Project = ({ item }) => {
   return (
     <ProjectItem to={`/detail/${item.id}`}>
-      <ImageBox img={item.thumbnail}>
-        {/* <img src={item.thumbnail} alt="project thumbnail" /> */}
-      </ImageBox>
+      <ImageBox img={item.thumbnail}></ImageBox>
       <MetaBox>
         <TypeText>{item.type} project</TypeText>
         <Title>{item.title}</Title>
