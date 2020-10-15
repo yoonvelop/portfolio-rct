@@ -15,9 +15,7 @@ import {
   SiGit,
 } from "react-icons/si";
 const SkillSection = () => {
-  return (
-    <Section title="Skills" component={Skill} scroll content={skills}></Section>
-  );
+  return <Section title="Skills" component={Skill} content={skills}></Section>;
 };
 
 const skills = [
@@ -79,7 +77,7 @@ const skills = [
     color: "#73AF5A",
     category: "Back-end",
     name: "Node.js",
-    level: 1,
+    level: 2,
   },
   {
     id: 8,

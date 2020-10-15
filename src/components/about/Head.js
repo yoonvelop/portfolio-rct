@@ -8,15 +8,16 @@ import { FaBars, FaGithub, FaVimeo } from "react-icons/fa";
 const Head = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  useEffect(() => {
-    resizeWindow();
-    window.addEventListener("resize", resizeWindow);
-  }, [windowWidth]);
-
   const resizeWindow = useCallback(() => {
     const width = window.innerWidth;
     setWindowWidth(width);
   }, []);
+
+  useEffect(() => {
+    resizeWindow();
+    window.addEventListener("resize", resizeWindow);
+  }, [windowWidth, resizeWindow]);
+
   const column = windowWidth < 600;
   return (
     <BgSection bgName="main-bg4" column={column}>
