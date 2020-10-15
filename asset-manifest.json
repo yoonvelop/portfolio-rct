@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "https://yoonvelop.github.io/portfolio-rct/static/css/main.9e010993.chunk.css",
-    "main.js": "https://yoonvelop.github.io/portfolio-rct/static/js/main.84acff38.chunk.js",
-    "main.js.map": "https://yoonvelop.github.io/portfolio-rct/static/js/main.84acff38.chunk.js.map",
-    "runtime-main.js": "https://yoonvelop.github.io/portfolio-rct/static/js/runtime-main.ad222737.js",
-    "runtime-main.js.map": "https://yoonvelop.github.io/portfolio-rct/static/js/runtime-main.ad222737.js.map",
-    "static/js/2.2c9392dc.chunk.js": "https://yoonvelop.github.io/portfolio-rct/static/js/2.2c9392dc.chunk.js",
-    "static/js/2.2c9392dc.chunk.js.map": "https://yoonvelop.github.io/portfolio-rct/static/js/2.2c9392dc.chunk.js.map",
-    "index.html": "https://yoonvelop.github.io/portfolio-rct/index.html",
-    "precache-manifest.2fcdea62d59c48ab8ba8d127dc6b43e4.js": "https://yoonvelop.github.io/portfolio-rct/precache-manifest.2fcdea62d59c48ab8ba8d127dc6b43e4.js",
-    "service-worker.js": "https://yoonvelop.github.io/portfolio-rct/service-worker.js",
-    "static/css/main.9e010993.chunk.css.map": "https://yoonvelop.github.io/portfolio-rct/static/css/main.9e010993.chunk.css.map",
-    "static/js/2.2c9392dc.chunk.js.LICENSE.txt": "https://yoonvelop.github.io/portfolio-rct/static/js/2.2c9392dc.chunk.js.LICENSE.txt"
+    "main.css": "https://yoonvelop.com/static/css/main.9e010993.chunk.css",
+    "main.js": "https://yoonvelop.com/static/js/main.5a124dc3.chunk.js",
+    "main.js.map": "https://yoonvelop.com/static/js/main.5a124dc3.chunk.js.map",
+    "runtime-main.js": "https://yoonvelop.com/static/js/runtime-main.9c64adee.js",
+    "runtime-main.js.map": "https://yoonvelop.com/static/js/runtime-main.9c64adee.js.map",
+    "static/js/2.9704b84e.chunk.js": "https://yoonvelop.com/static/js/2.9704b84e.chunk.js",
+    "static/js/2.9704b84e.chunk.js.map": "https://yoonvelop.com/static/js/2.9704b84e.chunk.js.map",
+    "index.html": "https://yoonvelop.com/index.html",
+    "precache-manifest.18dc32ba7104a10b01c7c585110b9d54.js": "https://yoonvelop.com/precache-manifest.18dc32ba7104a10b01c7c585110b9d54.js",
+    "service-worker.js": "https://yoonvelop.com/service-worker.js",
+    "static/css/main.9e010993.chunk.css.map": "https://yoonvelop.com/static/css/main.9e010993.chunk.css.map",
+    "static/js/2.9704b84e.chunk.js.LICENSE.txt": "https://yoonvelop.com/static/js/2.9704b84e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.ad222737.js",
-    "static/js/2.2c9392dc.chunk.js",
+    "static/js/runtime-main.9c64adee.js",
+    "static/js/2.9704b84e.chunk.js",
     "static/css/main.9e010993.chunk.css",
-    "static/js/main.84acff38.chunk.js"
+    "static/js/main.5a124dc3.chunk.js"
   ]
 }
