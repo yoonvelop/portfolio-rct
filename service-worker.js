@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "https://yoonvelop.com/precache-manifest.18dc32ba7104a10b01c7c585110b9d54.js"
+  "https://yoonvelop.com/precache-manifest.0b8f3d467e9c10d2ed7617950b855c4d.js"
 );
 
 self.addEventListener('message', (event) => {

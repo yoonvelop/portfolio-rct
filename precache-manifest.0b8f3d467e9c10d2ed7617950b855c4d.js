@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e8930e6e6f6258a21d169d1db94a70b4",
+    "revision": "45521fc581db3ecccd8701e331658ac2",
     "url": "https://yoonvelop.com/index.html"
   },
   {
-    "revision": "80f790e0829641c5882f",
+    "revision": "f2ac4b2cd3f9d840ca95",
     "url": "https://yoonvelop.com/static/css/main.9e010993.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://yoonvelop.com/static/js/2.9704b84e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "80f790e0829641c5882f",
-    "url": "https://yoonvelop.com/static/js/main.5a124dc3.chunk.js"
+    "revision": "f2ac4b2cd3f9d840ca95",
+    "url": "https://yoonvelop.com/static/js/main.b58a37da.chunk.js"
   },
   {
     "revision": "38e42b7f6cfc107dc4d5",
