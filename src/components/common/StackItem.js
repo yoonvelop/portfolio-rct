@@ -14,4 +14,4 @@ const Stack = styled.span`
   border-radius: 0.2rem;
   margin: 0.2rem;
 `;
-export default StackItem;
+export default React.memo(StackItem);

@@ -139,4 +139,4 @@ const LinkBox = styled.div`
   display: flex;
 `;
 
-export default Summary;
+export default React.memo(Summary);

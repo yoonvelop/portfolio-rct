@@ -15,4 +15,4 @@ const StyledBottom = styled.div`
   }
 `;
 
-export default Bottom;
+export default React.memo(Bottom);

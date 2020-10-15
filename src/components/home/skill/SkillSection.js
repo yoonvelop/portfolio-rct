@@ -115,4 +115,4 @@ const skills = [
   },
 ];
 
-export default SkillSection;
+export default React.memo(SkillSection);

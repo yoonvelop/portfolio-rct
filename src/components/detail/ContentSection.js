@@ -83,4 +83,4 @@ const DescBox = styled.div`
   color: ${palette.text_gray};
 `;
 
-export default ContentSection;
+export default React.memo(ContentSection);

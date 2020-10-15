@@ -102,4 +102,4 @@ const StackBox = styled.div`
   flex-wrap: wrap;
 `;
 
-export default Project;
+export default React.memo(Project);

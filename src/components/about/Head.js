@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import styled from "styled-components";
 import palette from "../../lib/styles/palette";
 import BgSection from "../common/BgSection";
@@ -13,10 +13,10 @@ const Head = () => {
     window.addEventListener("resize", resizeWindow);
   }, [windowWidth]);
 
-  const resizeWindow = () => {
+  const resizeWindow = useCallback(() => {
     const width = window.innerWidth;
     setWindowWidth(width);
-  };
+  }, []);
   const column = windowWidth < 600;
   return (
     <BgSection bgName="main-bg4" column={column}>
@@ -80,4 +80,4 @@ const links = [
     icon: <FaVimeo />,
   },
 ];
-export default Head;
+export default React.memo(Head);

@@ -27,4 +27,4 @@ const ContactBox = styled.div`
     margin-right: 0.5rem;
   }
 `;
-export default Contact;
+export default React.memo(Contact);

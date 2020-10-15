@@ -10,4 +10,4 @@ const ProjectSection = () => {
   );
 };
 
-export default ProjectSection;
+export default React.memo(ProjectSection);

@@ -50,7 +50,7 @@ const inintialProjects = [
     category: "Front-end",
     type: "side",
     title: "Simple Youtube",
-    stack: ["React.js"],
+    stack: ["React.js", "PostCSS"],
     summary: "Youtube의 간단한 기능( 인기동영상, 검색 )만을 구현",
     desc:
       "Youtube Data API를 이용해서 인기동영상 25개를 출력하고 검색 기능만을 구현한 간단한 Youtube clone coding",

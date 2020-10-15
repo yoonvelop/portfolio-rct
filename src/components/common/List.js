@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import styled, { css } from "styled-components";
 import palette from "../../lib/styles/palette";
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
@@ -13,18 +13,18 @@ const List = ({ vertical, scroll, content, component: Component }) => {
     return () => window.removeEventListener("resize", resizeWindow);
   }, [hasScroll]);
 
-  const resizeWindow = () => {
+  const resizeWindow = useCallback(() => {
     const hasHorizontalScrollbar =
       scrollRef.current.scrollWidth > scrollRef.current.clientWidth;
     setHasScroll(hasHorizontalScrollbar);
-  };
+  }, []);
 
-  const onScroll = () => {
+  const onScroll = useCallback(() => {
     scrollRef.current.scrollLeft === 0
       ? setlleftLocation(false)
       : setlleftLocation(true);
-  };
-  const onClick = (e) => {
+  }, []);
+  const onClick = useCallback((e) => {
     const left = leftLocation ? 0 : scrollRef.current.scrollWidth;
     scrollRef.current.scrollTo({
       top: window.scrollTop,
@@ -32,7 +32,7 @@ const List = ({ vertical, scroll, content, component: Component }) => {
       behavior: "smooth",
     });
     setlleftLocation(!leftLocation);
-  };
+  }, []);
 
   return (
     <ListBlock
@@ -116,4 +116,4 @@ const ListBlock = styled.div`
   }
 `;
 
-export default List;
+export default React.memo(List);

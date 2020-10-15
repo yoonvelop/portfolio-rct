@@ -19,4 +19,4 @@ const Wrap = styled.div`
     padding: 2rem 1rem;
   }
 `;
-export default DetailWrap;
+export default React.memo(DetailWrap);

@@ -68,4 +68,4 @@ const GradientBox = styled.div`
   }
 `;
 
-export default BgSection;
+export default React.memo(BgSection);

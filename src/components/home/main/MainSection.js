@@ -48,4 +48,4 @@ const Desc = styled.p`
   }
 `;
 
-export default MainSection;
+export default React.memo(MainSection);
