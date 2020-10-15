@@ -50,10 +50,10 @@ const inintialProjects = [
     category: "Front-end",
     type: "side",
     title: "Portfolio",
-    stack: ["React.js", "styled-component", "contextAPI"],
-    summary: "간단한 소개 및 프로젝트를 보여주는 포트폴리오 사이트",
+    stack: ["React.js", "React-Router", "styled-component", "contextAPI"],
+    summary: "간단한 소개 및 프로젝트를 보여주는 SPA 포트폴리오 사이트",
     desc:
-      "간단한 소개와 스킬, 여태까지 작업한 사이드,회사 프로젝트를 보여주는 포트폴리오 사이트를 React.js를 사용해 구현했습니다. ",
+      "SPA로 저의 간단한 소개와 스킬, 여태까지 작업한 사이드,회사 프로젝트를 보여주는 포트폴리오 사이트를 React.js를 사용해 구현했습니다. ",
     thumbnail: "images/project/portfolio_thumbnail.png",
     image: ["portfolio01", "portfolio02", "portfolio03", "portfolio04"],
     demo: "https://yoonvelop.github.io/portfolio-rct/",
@@ -67,7 +67,7 @@ const inintialProjects = [
     stack: ["React.js", "PostCSS"],
     summary: "Youtube의 간단한 기능( 인기동영상, 검색 )만을 구현",
     desc:
-      "Youtube Data API를 이용해서 인기동영상 25개를 출력하고 검색 기능만을 구현한 간단한 Youtube clone coding",
+      "Youtube Data API를 이용해서 인기동영상 25개를 출력하고 검색 기능만을 구현한 간단한 Youtube clone coding 입니다.",
     thumbnail: "images/project/youtube_thumbnail.png",
     image: ["youtube01", "youtube02", "youtube03"],
     demo: "https://yoonvelop.github.io/youtube-simple/",

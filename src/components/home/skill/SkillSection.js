@@ -13,6 +13,7 @@ import {
   SiMysql,
   SiMongodb,
   SiGit,
+  SiLinux,
 } from "react-icons/si";
 const SkillSection = () => {
   return <Section title="Skills" component={Skill} content={skills}></Section>;
@@ -81,6 +82,14 @@ const skills = [
   },
   {
     id: 8,
+    icon: <SiLinux />,
+    color: "#F0B810",
+    category: "Back-end",
+    name: "Linux",
+    level: 2,
+  },
+  {
+    id: 9,
     icon: <SiAmazon />,
     color: "#FCAD24",
     category: "Cloud",
@@ -88,7 +97,7 @@ const skills = [
     level: 3,
   },
   {
-    id: 9,
+    id: 10,
     icon: <SiMysql />,
     color: "#43759B",
     category: "Database",
@@ -96,7 +105,7 @@ const skills = [
     level: 4,
   },
   {
-    id: 10,
+    id: 11,
     icon: <SiMongodb />,
     color: "#489242",
     category: "Database",
@@ -104,7 +113,7 @@ const skills = [
     level: 2,
   },
   {
-    id: 11,
+    id: 12,
     icon: <SiGit />,
     color: "#E94F31",
     category: "Etc",
